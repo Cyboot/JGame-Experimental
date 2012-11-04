@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 import de.timweb.evolevel.game.EvoLevelCanvas;
 
-public class EvoLevelMain {
+public class ExperimentalMain {
 	
 	public static void main(String[] args) {
 		EvoLevelCanvas evocanvas = new EvoLevelCanvas(1024, 600, 10);

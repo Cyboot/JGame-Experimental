@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import de.timweb.evolevel.EvoLevelMain;
+import de.timweb.evolevel.ExperimentalMain;
 
 public class ImageLoader {
 	public static BufferedImage point_red;
@@ -20,7 +20,7 @@ public class ImageLoader {
 
 	private static BufferedImage loadImage(String img) {
 		try {
-			return ImageIO.read(EvoLevelMain.class.getResource("/" + img));
+			return ImageIO.read(ExperimentalMain.class.getResource("/" + img));
 		} catch (IOException e) {
 			throw new IllegalArgumentException(
 					"The Image you tried to load was not found!", e);
