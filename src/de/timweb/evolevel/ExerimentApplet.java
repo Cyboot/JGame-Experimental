@@ -5,7 +5,7 @@ import java.applet.Applet;
 import de.timweb.evolevel.game.EvoLevelCanvas;
 
 
-public class EvoLevelApplet extends Applet{
+public class ExerimentApplet extends Applet{
 	@Override
 	public void init() {
 		super.init();
