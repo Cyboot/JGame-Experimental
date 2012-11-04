@@ -11,22 +11,7 @@ import java.awt.image.BufferStrategy;
 
 import de.timweb.evolevel.util.ImageLoader;
 
-/**
- * Das EvoLevelCanvas ist eine Unterklasse von java.awt.Canvas und stellt die
- * <b>Leinwand</b> dar, die sich in dem Fenster befindet und dieses komplett
- * ausfüllt. <br/>
- * <br/>
- * Außerdem enthält die Klasse die Grundbestandteile des Spieles, nämlich die
- * Endlosschleife, welche periodisch nacheinander erst die <b> update(int delta)
- * </b>, dann die <b> render(Graphics g) </b> Methode aufruft. <br/>
- * <br/>
- * Weiterhin ist sie aus bequemlichkeitsgründen auch für die Benutzerinteraktion
- * mit der Tastatur verantwortlich. Das Interface KeyListener ermöglicht die
- * Abfrage, ob eine bestimmte Taste gedrückt ist. Um einen einfachen und
- * schnellen Zugriff auf diese Funktion zu haben wird das mit Hilfe der
- * Variablen VK_TASTE in der Klasse Game gesetzt.
- */
-public class EvoLevelCanvas extends Canvas implements Runnable, KeyListener {
+public class ExperimentalCanvas extends Canvas implements Runnable, KeyListener {
 	public static int WIDTH;
 	public static int HEIGHT;
 
@@ -34,7 +19,7 @@ public class EvoLevelCanvas extends Canvas implements Runnable, KeyListener {
 	public static final int FPS_TARGET = 120;
 	public static final int DELTA_TARGET = 1000 / FPS_TARGET;
 
-	public EvoLevelCanvas(int width, int height, int border) {
+	public ExperimentalCanvas(int width, int height, int border) {
 		WIDTH = width;
 		HEIGHT = height;
 
@@ -51,12 +36,6 @@ public class EvoLevelCanvas extends Canvas implements Runnable, KeyListener {
 		t.start();
 	}
 
-	/**
-	* Die Methode in der die Endlosschleife des Spieles abläuft
-	* In der Endloschleife wird erst die update(int delta) Methode, dann die render(Graphics g) periodisch aufgerufen
-	* Auch findet hier die FPS Regulierung statt.
-	*
-	*/
 	@Override
 	public void run() {
 		long delta = 0;
@@ -90,17 +69,10 @@ public class EvoLevelCanvas extends Canvas implements Runnable, KeyListener {
 
 	}
 
-	/**
-	* die gesamte Spiellogik findet hier statt, jegliche Berechnung, Bewegungen und Effekte werden mit dem delta verrechnet
-	*/
 	private void update(int delta) {
 		Game.g.update(delta);
 	}
 
-	/**
-	* hier wird das Spiel auf das Canvas gezeichnet, alle dargestellten Entities, Hintergrundbilder und grafische Effekte werden hier dargestellt
-	* es finden KEINE Berechnungen oder überhaupt veränderungen von Entities statt!
-	*/
 	private void render(Graphics g) {
 		g.clearRect(0, 0, WIDTH, HEIGHT);
 

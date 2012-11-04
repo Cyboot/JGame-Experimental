@@ -2,14 +2,14 @@ package de.timweb.evolevel;
 
 import java.applet.Applet;
 
-import de.timweb.evolevel.game.EvoLevelCanvas;
+import de.timweb.evolevel.game.ExperimentalCanvas;
 
 
 public class ExerimentalApplet extends Applet{
 	@Override
 	public void init() {
 		super.init();
-		EvoLevelCanvas game = new EvoLevelCanvas(getWidth(),getHeight(),0);
+		ExperimentalCanvas game = new ExperimentalCanvas(getWidth(),getHeight(),0);
 		add(game);
 		game.start();
 	}

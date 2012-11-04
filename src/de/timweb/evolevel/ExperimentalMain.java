@@ -5,13 +5,13 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import de.timweb.evolevel.game.EvoLevelCanvas;
+import de.timweb.evolevel.game.ExperimentalCanvas;
 
 public class ExperimentalMain {
 	
 	public static void main(String[] args) {
-		EvoLevelCanvas evocanvas = new EvoLevelCanvas(1024, 600, 10);
-		JFrame frame = new JFrame("Evolevel");
+		ExperimentalCanvas evocanvas = new ExperimentalCanvas(1024, 600, 10);
+		JFrame frame = new JFrame("Experimental");
 		JPanel panel = new JPanel(new BorderLayout());
 		panel.add(evocanvas);
 		frame.setContentPane(panel);
