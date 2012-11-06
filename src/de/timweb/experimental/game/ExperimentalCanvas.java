@@ -1,4 +1,4 @@
-package de.timweb.evolevel.game;
+package de.timweb.experimental.game;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -9,7 +9,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferStrategy;
 
-import de.timweb.evolevel.util.ImageLoader;
+import de.timweb.experimental.util.ImageLoader;
 
 public class ExperimentalCanvas extends Canvas implements Runnable, KeyListener {
 	public static int WIDTH;

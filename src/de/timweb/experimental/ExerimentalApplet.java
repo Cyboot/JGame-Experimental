@@ -1,8 +1,8 @@
-package de.timweb.evolevel;
+package de.timweb.experimental;
 
 import java.applet.Applet;
 
-import de.timweb.evolevel.game.ExperimentalCanvas;
+import de.timweb.experimental.game.ExperimentalCanvas;
 
 
 public class ExerimentalApplet extends Applet{

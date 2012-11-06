@@ -1,11 +1,11 @@
-package de.timweb.evolevel.util;
+package de.timweb.experimental.util;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import de.timweb.evolevel.ExperimentalMain;
+import de.timweb.experimental.ExperimentalMain;
 
 public class ImageLoader {
 	public static BufferedImage point_red;

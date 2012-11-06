@@ -1,8 +1,8 @@
-package de.timweb.evolevel.entity;
+package de.timweb.experimental.entity;
 
 import java.awt.Graphics;
 
-import de.timweb.evolevel.util.Vector2d;
+import de.timweb.experimental.util.Vector2d;
 
 public abstract class Entity {
 	protected boolean isAlive = true;
